@@ -1,0 +1,73 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "User": [
+    {
+      "id": "1842",
+      "Name": "Bhushan Sanjay Dharane",
+      "Salary": "450000",
+      "Age": "25"
+    },
+    {
+      "id": "a797",
+      "Name": "Bhushan Sanjay Dharane",
+      "Salary": "450000",
+      "Age": "28"
+    },
+    {
+      "id": "2642",
+      "Name": "Shubham",
+      "Salary": "500000",
+      "Age": "16"
+    },
+    {
+      "id": "8ec4",
+      "Name": "nikhil",
+      "Salary": "300000",
+      "Age": "17"
+    },
+    {
+      "id": "11c6",
+      "Name": "sham",
+      "Salary": "50000",
+      "Age": "12"
+    },
+    {
+      "id": "a060",
+      "Name": "bhushan",
+      "Salary": "6778990",
+      "Age": "23"
+    },
+    {
+      "id": "5ebd",
+      "Name": "shamm",
+      "Salary": "50000",
+      "Age": "12"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

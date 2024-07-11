@@ -1,0 +1,75 @@
+<div class="container mt-2">
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Add User</button>
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">List</button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+      <div class="container mt-5">
+        <form class="row g-3 needs-validation" [formGroup]="userForm" (ngSubmit)="SubmitForm()">
+          <div class="col-md-3">
+            <label for="validationCustom01" class="form-label">Name</label>
+            <input type="text" class="form-control" id="validationCustom01"  name="Name" formControlName="Name" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom02" class="form-label">Salary</label>
+            <input type="text" class="form-control" id="validationCustom02" name="Salary" formControlName="Salary" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label">Age</label>
+            <input type="text" class="form-control" id="validationCustom05" name="Age" formControlName="Age" required>
+            <div class="invalid-feedback">
+              Please provide a valid Age.
+            </div>
+          </div>
+         
+          <div class="row mt-5 d-flex">
+            <div class="col-2">
+              <button class="btn btn-success" type="submit">Submit form</button>
+            </div>
+            <div class="col-2">
+              <button class="btn btn-danger" type="reset">Reset form</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+      <!-- USER LIST CODE -->
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Age</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users" >
+            <th scope="row">#</th>
+            <td>{{user.Name}}</td>
+            <td>{{user.Salary}}</td>
+            <td>{{user.Age}}</td>
+            <td>
+              <button type="button" (click)="DeleteUserByID(user.id)" class="btn btn-danger mx-1">Delete</button>
+              <button type="button" (click)="GetUserByID(user.id)" class="btn btn-warning">Edit</button>
+            </td>
+          </tr>
+         
+         
+        </tbody>
+      </table>
+      <!-- USER LIST CODE -->
+    </div>
+  </div>
+</div>
